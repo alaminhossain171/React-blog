@@ -36,7 +36,7 @@ return setError(err.message);
         
         
         );
-    },2000)
+    },100)
 }, [url])
 return {data,loding,error};
 }
