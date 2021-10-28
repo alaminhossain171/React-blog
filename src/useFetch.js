@@ -11,7 +11,7 @@ const useFetch = (url) => {
       fetch(url,{signal:abortCont.signal})
         .then(function (res) {
           if (!res.ok) {
-            throw Error("Could not fetch data");
+            throw Error("Could not fetch data !");
           }
           return res.json();
         })
@@ -30,7 +30,7 @@ const useFetch = (url) => {
             }
          
         });
-    }, 1000);
+    }, 100);
     return ()=>abortCont.abort();
   }, [url]);
   return { data, loding, error };

@@ -8,6 +8,8 @@ import {
   
 } from "react-router-dom";
 import Create from "./Create";
+import BlogDetails from "./BlogDetails";
+import NotFound from "./NotFound";
 
 function App() {
   return (   <Router>
@@ -19,7 +21,8 @@ function App() {
        
        <Route path='/' exact component={HomePage} />
        <Route path='/create' exact component={Create} />
-      
+       <Route path='/details/:id' exact component={BlogDetails} />
+       <Route path='*' exact component={NotFound} />
       </Switch>
      
       </div>
